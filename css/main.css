@@ -1,0 +1,113 @@
+@font-face {
+    font-family: Malvie;
+    src: url("/assets/fonts/MalvieTrial.otf") format("opentype");
+}
+
+:root {
+    /* Farben */
+    --main-bg-color: rgb(25, 37, 32);
+    --main-btn-color-s: rgb(93, 204, 93);
+    --main-btn-color-sH: rgba(93, 204, 93, 0.253);
+    --notify-bg: #474350ff;
+    --notify-suggess: #7fb069ff;
+    --notify-warn: #F5B700;
+    --notify-error: #f4442eff;
+    --notify-info: #00a5cfff;
+    --notify-team: #B30089;
+    --notify-normal: rgb(39, 39, 39);
+
+    /* Schrift */
+    --main-font: Malvie;
+}
+body {
+    background-color: var(--main-bg-color);
+}
+
+/* Text Klassen */
+.main-font{
+    font-family: var(--main-font);
+}
+
+/* Button Klassen */
+
+.btn-main{
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: var(--main-font);
+}
+
+.btn-main:hover{
+    cursor: pointer;
+}
+
+/* Notify Klasse */
+
+.container {
+    width: 100px;
+    float: right;
+}
+.notify{
+    margin-top: 15px;
+    padding: 15px;
+    display: block;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-left: 7px solid var(--notify-normal);
+    background-color: var(--notify-bg);
+    box-shadow: 5px 5px 15px 5px #000000;
+/*     width: 40%; */
+    /* Font */
+    font-family: var(--main-font);
+    color: white;
+}
+
+.right {
+    margin-right: 0px;
+    margin-left: auto;
+}
+.notify-info{
+    border-color: var(--notify-info);
+}
+.notify-warn{
+    border-color: var(--notify-warn);
+}
+.notify-error{
+    border-color: var(--notify-error);
+}
+.notify-suggess{
+    border-color: var(--notify-suggess);
+}
+
+.notify-team{
+    border-color: var(--notify-team);
+}
+.notify-emergency{
+    animation: emergency 1s infinite
+}
+
+@keyframes emergency {
+    0%, 50% {
+        border-color: red;
+    }
+    51%, 100% {
+        border-color: blue;
+    }
+}
+
+.notify-t{
+    font-size: 15pt;
+}
+
+.test-tool{
+    display: flex;
+}
+
+.test{
+    visibility: hidden;
+}
+
+.container-preview{
+    width: 40%;
+}
